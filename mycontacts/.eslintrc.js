@@ -10,6 +10,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  // desativar e criar regras novas
   rules: {
+    'class-methods-use-this': 'off',
   },
 };
