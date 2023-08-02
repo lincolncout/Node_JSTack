@@ -5,6 +5,7 @@ const router = Router();
 
 // faz um require de ContactController
 const ContactController = require('./app/controllers/ContactController');
+const CategoryController = require('./app/controllers/CategoryController');
 
 // quando gerar a rota /contacts ir para ContactController.index
 router.get(
@@ -21,5 +22,8 @@ router.get('/contacts/:id', ContactController.show);
 router.delete('/contacts/:id', ContactController.delete);
 router.post('/contacts', ContactController.store);
 router.put('/contacts/:id', ContactController.update);
+
+router.get('/categories', CategoryController.index);
+router.post('/categories', CategoryController.store);
 
 module.exports = router;
