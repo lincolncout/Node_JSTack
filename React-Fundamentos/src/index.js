@@ -1,7 +1,9 @@
-const user = {};
+import React from 'react'
+import  ReactDOM  from 'react-dom'
 
-// Optional Chaining
-console.log(user?.address?.street)
-
-if(user && user.address){
-}
+ReactDOM.render(
+    <h1 id='title'>
+        <span> Olá mundo! </span> 
+    </h1>,
+    document.getElementById('root'),
+)
