@@ -24,6 +24,7 @@ const db = require('../../database'); // o node entende que o arquivo é o index
 class ContactsRepository {
   async findAll(orderBy = 'ASC') {
     const direction = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
+    // return new Promise((resolve, reject) => { resolve(contacts); });
     const rows = await db.query(`
     SELECT contacts.*, categories.name AS category_name
     FROM contacts
