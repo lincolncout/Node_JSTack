@@ -11,4 +11,4 @@ const user = {
 const { instagram , age, skills, full_name : fullName} = user;
 const [primary, secondary, tertinary, quaternary] = skills
 
-console.log(fullName)
+console.log(quaternary)

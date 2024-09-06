@@ -1,4 +1,4 @@
-// criando paretro padrão
+// criando parametro padrão
 function printGreting(message = "Teste"){
     console.log(message)
 }
