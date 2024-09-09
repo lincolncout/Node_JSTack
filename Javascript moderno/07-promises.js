@@ -14,8 +14,6 @@ const apiCall  = new Promise((resolve, reject) => {
 //   console.log(erro)
 // })
 
-console.log("Depois da Promise");
-
 // Segundo modo de fazer uma chamada de API
 
 async function run(){
@@ -28,5 +26,3 @@ async function run(){
 }
 
 run();
-
-console.log("Depois da Promise");
