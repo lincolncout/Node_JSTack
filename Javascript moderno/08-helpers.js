@@ -3,7 +3,7 @@ const array = ["Node.js", "React", "Typescript"];
 
 const includesString = tech.includes(".");
 const includesArray = array.includes("React");
-console.log({includesArray})
+console.log(includesArray)
 
 const startsWith = tech.startsWith("No");
 console.log(startsWith)
