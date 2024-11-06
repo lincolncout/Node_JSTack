@@ -6,7 +6,7 @@ export default function PostHeader(props) {
   return (
     <>
       <strong>
-        {props.post.read && <s>props.post.title</s>}
+        {props.post.read && <s>{props.post.title}</s>}
         {!props.post.read && props.post.title}
         <Button
           onClick={() => props.onRemove(props.post.id)}

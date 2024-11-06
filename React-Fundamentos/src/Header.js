@@ -3,16 +3,18 @@ import PropTypes from "prop-types";
 import Button from "./Button";
 import { ThemeContext } from "./ThemeContext";
 
+import *  as styles from "./Header.css";
+
 export default function Header({title, children}) {
 
   const {onToogleTheme} = useContext(ThemeContext)
 
   return (
-    <>
-      <h1>{title}</h1> 
+    <div>
+      <h1 className={styles.title}>{title}</h1> 
       <Button onClick={onToogleTheme}>Mudar Tema</Button>
       {children}
-    </>
+    </div>
   )
 }
 
