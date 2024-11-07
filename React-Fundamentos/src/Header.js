@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Button from "./Button";
 import { ThemeContext } from "./ThemeContext";
 
-import *  as styles from "./Header.css";
+import *  as styles from "./Header.scss";
 
 export default function Header({title, children}) {
 
