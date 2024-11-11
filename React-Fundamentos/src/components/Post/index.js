@@ -5,6 +5,8 @@ import PostHeader from "./PostHeader"
 import *  as styles from "./Post.scss";
 
 export default function Post(props) {
+
+  console.log(props)
   return (
     <article
       className={

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import Post from "./Post"
-import Header from "./Header"
-import { ThemeProvider } from "./ThemeContext";
+import Post from "../Post"
+import Header from "../Header"
+import { ThemeProvider } from "../../context/ThemeContext";
 
 // Render -> Renderizar -> mostrar algo em tela
 // Props -> Propriedades
@@ -32,7 +32,9 @@ function App() {
         id: Math.random(),
         title: `Title#0${prevStates.length + 1}`,
         subtitle: `Sub#0${prevStates.length + 1}`,
-        likes: 50
+        likes: 50,
+        read: false,
+        removed: false
       }
     ]);
   }
