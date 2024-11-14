@@ -3,6 +3,8 @@ import Post from "../Post"
 import Header from "../Header"
 import { ThemeProvider } from "../../context/ThemeContext";
 
+import {Title} from './styles'
+
 // Render -> Renderizar -> mostrar algo em tela
 // Props -> Propriedades
 function App() {
@@ -10,7 +12,7 @@ function App() {
   // ao colocar [] no posts é escolhida a primeira posicao do array de estados
     // na primeira posicao do useState tem a variavel dos nossos posts
   const [posts, setPosts] = useState([
-    { id: Math.random(), title: 'Title#01', subtitle: 'Sub#01',likes: 20  , read: false, removed: true},
+    { id: Math.random(), title: 'Title#01', subtitle: 'Sub#01',likes: 20  , read: false, removed: false},
     { id: Math.random(), title: 'Title#02', subtitle: 'Sub#02', likes: 10 , read: true, removed: false},
     { id: Math.random(), title: 'Title#03', subtitle: 'Sub#03', likes: 50 , read: false, removed: false},
   ]);
@@ -43,9 +45,9 @@ function App() {
     <ThemeProvider>
       <Header
         title="Jstack's blog">
-        <h2>Posts da semana
+        <Title as="h2">Posts da semana
           <button onClick={handleRefresh}>Atualizar</button>
-        </h2>
+        </Title>
       </Header>
 
       {posts.map(post => (

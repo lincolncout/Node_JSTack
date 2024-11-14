@@ -1,9 +1,12 @@
 import React, {useContext} from "react";
 import PropTypes from "prop-types";
+
+import Title from '../Title'
+
 import Button from "../Button";
+
 import { ThemeContext } from "../../context/ThemeContext";
 
-import *  as styles from "./Header.scss";
 
 export default function Header({title, children}) {
 
@@ -11,7 +14,7 @@ export default function Header({title, children}) {
 
   return (
     <div>
-      <h1 className={styles.title}>{title}</h1> 
+      <Title>{title}</Title> 
       <Button onClick={onToogleTheme}>Mudar Tema</Button>
       {children}
     </div>
