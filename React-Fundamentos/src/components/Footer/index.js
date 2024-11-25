@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import { Container } from './styles';
 
-export default function Footer({ onToogleTheme, selectedTheme }) {
+import { SelectedThemeContext } from '../../context/SelectedThemeContext';
+
+export default function Footer() {
+
+  const {onToogleTheme, selectedTheme} = useContext(SelectedThemeContext);
+
   return (
     <Container>
       <span>JStack's Blog. Todos os direitos reservados.</span>

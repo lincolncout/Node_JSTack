@@ -6,25 +6,15 @@ import Layout from './components/Layout';
 
 import themes from './styles/themes'
 
+import { SelectedThemeProvider } from './context/SelectedThemeContext';
+
+
 function App() {
-  const [theme, setTheme] = useState('dark');
-
-  const currentTheme = useMemo(() => {
-    return themes[theme] || themes.dark;
-  }, [theme]);
-
-  function handleToogleTheme(){
-    setTheme(prevState => prevState === 'dark' ? 'light' : 'dark')
-  }
-
   return (
-    <ThemeProvider theme={currentTheme}>
-      <GlobalStyle />
-      <Layout 
-        onToogleTheme = {handleToogleTheme} 
-        selectedTheme = {theme}
-      />
-    </ThemeProvider>
+    <SelectedThemeProvider>
+        <GlobalStyle />
+        <Layout />
+    </SelectedThemeProvider>
   );
 };
 
